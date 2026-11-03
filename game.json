@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
+  "title": "Sea Battle",
+  "description": "Hide your fleet on a 10x10 grid and hunt down the computer's ships shot by shot in this free naval strategy game you play in your browser.",
+  "about": "Sea Battle is the classic hidden-fleet duel against the computer. Drag your carrier, cruiser, frigate, submarine and patrol boat onto your grid, tap to rotate them, or let the Random button deploy them for you. Ships may not touch, not even at the corners, so every placement is a small puzzle of its own.\n\nThen the shooting starts. Pick a cell in enemy waters and watch the shell fall: a white splash means open sea, a fireball means you found a ship, and every hit earns you another shot. Sink a ship and its burning wreck is revealed, while the water around it is marked as clear.\n\nThe enemy admiral has three personalities. Easy fires mostly at random, Normal sweeps in a pattern and chases every hit, and Hard calculates where your remaining ships are most likely hiding. Your wins, losses and best games are saved for each difficulty.",
+  "howToPlay": "Place all five ships on your grid without letting them touch, then press Start. Take turns firing at the enemy grid: a hit lets you fire again, a miss passes the turn to the computer. Sink all five enemy ships before the computer sinks yours to win.",
+  "controls": [
+    {
+      "input": "Drag / Click or tap",
+      "action": "Move ships during placement, rotate a placed ship, fire at a cell"
+    },
+    {
+      "input": "Arrow keys + Enter / Space",
+      "action": "Aim and fire with the keyboard"
+    },
+    {
+      "input": "R",
+      "action": "Rotate the ship you are dragging"
+    },
+    {
+      "input": "Esc / P",
+      "action": "Pause the game"
+    }
+  ],
+  "tips": [
+    "When searching, fire on a checkerboard pattern: even the smallest ship always covers two neighbouring cells.",
+    "After two hits in a row, keep firing along that line instead of trying the cells to the side.",
+    "Cells next to a sunk ship are marked as clear water, so use them to rule out large areas.",
+    "Against Hard, avoid predictable layouts: mix vertical and horizontal ships and don't leave large empty areas."
+  ],
+  "faq": [
+    {
+      "question": "Is Sea Battle free to play?",
+      "answer": "Yes, Sea Battle is completely free and runs in your browser with no download or sign-up."
+    },
+    {
+      "question": "Can I play Sea Battle on my phone or tablet?",
+      "answer": "Yes, it is fully playable with touch: drag ships to place them and tap to fire. In portrait mode the board that matters is shown large, with a tappable mini-map of the other one."
+    },
+    {
+      "question": "Can ships be placed next to each other?",
+      "answer": "No, ships may not touch, not even diagonally. That is why the cells around a sunk ship are automatically marked as clear water."
+    }
+  ],
+  "category": "Board",
+  "tags": [
+    "naval",
+    "strategy",
+    "grid",
+    "ships",
+    "vs-computer",
+    "classic"
+  ],
+  "author": "PewPlay",
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": [
+    "screenshots/1.png",
+    "screenshots/2.png",
+    "screenshots/3.png"
+  ],
+  "added": "2026-11-03",
+  "draft": false
+}

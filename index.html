@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#06182b">
+  <title>Sea Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="cv" aria-label="Sea Battle game area"></canvas>
+
+    <!-- Top bar: menu, turn indicator, sound -->
+    <header id="bar">
+      <button id="btnMenu" class="icon" aria-label="Pause menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      </button>
+      <div id="status" class="pill"><span class="dot"></span><span id="statusText">Deploy your fleet</span></div>
+      <button id="btnMute" class="icon" aria-label="Toggle sound">
+        <svg class="on" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <svg class="off" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+
+    <!-- Placement buttons (positioned from JS) -->
+    <div id="placeBar" class="hidden">
+      <button id="btnClear" class="btn">Clear</button>
+      <button id="btnRandom" class="btn">Random</button>
+      <button id="btnStart" class="btn primary" disabled>Start</button>
+    </div>
+
+    <button id="btnResults" class="btn primary hidden">Results</button>
+
+    <!-- Main menu -->
+    <section id="menu" class="overlay">
+      <div class="card">
+        <div class="logo"><span>Sea</span> Battle</div>
+        <p class="sub">Hide your fleet, hunt theirs. First to sink every ship wins.</p>
+        <div class="label">Admiral of the enemy fleet</div>
+        <div id="diffs" class="diffs">
+          <button class="diff" data-d="easy"><b>Easy</b><small id="recEasy">W 0 · L 0</small></button>
+          <button class="diff" data-d="normal"><b>Normal</b><small id="recNormal">W 0 · L 0</small></button>
+          <button class="diff" data-d="hard"><b>Hard</b><small id="recHard">W 0 · L 0</small></button>
+        </div>
+        <p id="diffInfo" class="info"></p>
+        <button id="btnPlay" class="btn primary big">Play</button>
+      </div>
+    </section>
+
+    <!-- Pause -->
+    <section id="pause" class="overlay hidden">
+      <div class="card small">
+        <h2>Paused</h2>
+        <button id="btnResume" class="btn primary big">Resume</button>
+        <button id="btnRestart" class="btn big">New game</button>
+        <button id="btnHome" class="btn big">Main menu</button>
+      </div>
+    </section>
+
+    <!-- Game over -->
+    <section id="over" class="overlay hidden">
+      <div class="card">
+        <h2 id="overTitle">Victory!</h2>
+        <p id="overSub" class="sub"></p>
+        <div class="stats">
+          <div><b id="stShots">0</b><small>Shots</small></div>
+          <div><b id="stAcc">0%</b><small>Accuracy</small></div>
+          <div><b id="stTurns">0</b><small>Turns</small></div>
+          <div><b id="stTime">0:00</b><small>Time</small></div>
+        </div>
+        <p id="overRec" class="info"></p>
+        <div class="row">
+          <button id="btnAgain" class="btn primary big">Play again</button>
+        </div>
+        <div class="row">
+          <button id="btnSee" class="btn">See board</button>
+          <button id="btnOverMenu" class="btn">Menu</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
